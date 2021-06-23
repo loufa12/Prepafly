@@ -1,0 +1,148 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+
+* {
+    word-wrap: break-word;
+}
+
+body {
+    margin: 0;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+#choix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}   
+
+#choix #ajout a, #choix #modif a {
+    letter-spacing: 1px;
+    color: black;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+#choix #ajout a:hover, #choix #modif a:hover {
+    color: #4ea3fc;
+}
+
+#choix #ajout {
+    margin-right: 1.5rem;
+}
+
+#choix #modif {
+    margin-left: 1.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width : 75%;
+    margin : auto;
+    margin-bottom: 3rem;
+    padding : 1rem;
+    padding-top: 0.5rem;
+}
+        
+/*logo + */
+.container img {
+    height: 2rem;
+    position: absolute;
+    left: 85%;
+}
+
+.container .reponse img {
+    height: 2rem;
+    position: absolute;
+    left: 85%;
+}
+
+.container .question {
+    width: 100%;
+}
+
+/*questions visibles*/
+.container .visible {
+    display: inline-block;
+    width: 100%;
+    background-color: #ececec;
+    box-shadow: 0 0 10px rgb(0,0,0,0.2);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container .visible a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 95%;
+    max-width: 95%;
+    font-size: 1rem;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.question .visible a {
+    cursor: pointer;
+}
+
+#deroulant1 p, #deroulant2 p, 
+#deroulant3 p, #deroulant4 p, #deroulant5 p{
+    width: 95%;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 1rem;
+    margin-top: 0.2rem;
+}
+
+.boutons_faq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.boutons_faq a {
+    display:inline-block;
+    margin-right: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.boutons_faq a:hover {
+    color: #4ea3fc;
+}
+
+.boutons_faq #supp_faq {
+    margin-left: 20rem;
+}
+
+.boutons_faq #modif_faq {
+    margin-right: 20rem;
+}

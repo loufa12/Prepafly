@@ -1,0 +1,60 @@
+#allrecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 8rem;
+    margin-left: 8rem;
+}
+
+#recherche {
+    width: 45%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+#recherche input {
+    margin-top: 0.8rem;
+}
+
+#recherche input[type=submit] {
+    margin-top: 0;
+}
+
+#filtres {
+    width: 40%;
+    margin-top: 1rem;
+}
+
+#filtres input {
+    margin-bottom: 0.8rem;
+}
+
+#filtres p {
+    margin-bottom: 1.5rem;
+}
+
+#filtres input[type=submit] {
+    margin-top: 0.4rem;
+}
+
+#cases_filtres {
+    text-align: left;
+    margin-left: 4rem;
+
+}
+
+.bouton_supp {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.bouton_supp:hover {
+    color: #4ea3fc;
+}

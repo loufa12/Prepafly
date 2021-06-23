@@ -1,0 +1,105 @@
+h3 {
+    margin-bottom: 2rem;
+}
+
+
+h3, p {
+	text-align: center;
+}
+
+#phrase {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+#formulaire {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+    margin-left: 25rem;
+}
+
+#formulaire .champs {
+	text-align: left;
+    padding-bottom: 1rem;
+}
+
+#formulaire .champs input {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.1);
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.end {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.end a, .end input[type=submit] {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.end input[type=submit]:hover {
+    color: #4ea3fc;
+    box-shadow: 0 0 10px #4ea3fc;
+}
+
+.end input[type=submit] {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.end #reinit {
+    margin-right: 3rem;
+}
+
+.end #reinit:hover {
+    color: #4ea3fc;
+}
+
+@media screen and (max-width: 1200px)
+{
+    #formulaire {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    #formulaire {
+        margin-left: 4rem;
+    }
+
+    #formulaire #form_part2 {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    #formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    }
+
+    #formulaire #form_part1, #formulaire #form_part2 {
+    text-align: center;
+    width: 90%;
+    }
+}

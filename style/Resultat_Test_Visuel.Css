@@ -1,0 +1,69 @@
+
+#temps_reaction {
+	text-align: center;
+	margin-bottom: 10rem;
+}
+
+
+#bouton_fin {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*features du bouton*/
+#bouton_fin a {
+	font-size: 1rem;
+	text-align: center;
+	width: 10rem;
+	color: black;
+	text-decoration: none;
+	background-color: white; /*#b1dbfd*/
+	border-radius: 12px;
+	/*transition-duration: 0.2s;
+	transition-timing-function: ease-out;*/
+	padding: 0.8rem 0.8rem;
+	margin-bottom: 8rem;
+	margin-top: 4rem;
+	box-shadow: 0 0 10px #4ea3fc; /*4ea3fc*/
+}
+
+#bouton_fin #fin_test:hover {
+	border: none;
+	color: #4ea3fc;
+	font-weight: bold;
+	box-shadow: 0 0 10px #4ea3fc; /*4ea3fc*/
+
+}
+
+#attente {
+	text-align: center;
+}
+
+.vert {
+	color: green;
+	border: 2px green solid;
+	border-radius: 8px;
+	padding: 0.3rem 0.6rem;
+}
+
+.rouge {
+	color: red;
+	border: 2px red solid;
+	border-radius: 8px;
+	padding: 0.3rem 0.6rem;
+}
+
+.jaune {
+	color: yellow;
+	border: 2px yellow solid;
+	border-radius: 8px;
+	padding: 0.3rem 0.6rem;
+}
+
+.orange {
+	color: orange;
+	border: 2px orange solid;
+	border-radius: 8px;
+	padding: 0.3rem 0.6rem;
+}

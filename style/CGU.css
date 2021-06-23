@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+	margin: 0;
+}
+
+.all {
+	margin: 3%;
+}
+
+.all p {
+	text-align: justify;
+	color: black;
+	letter-spacing: 1px;
+}
+
+.intro {
+	color: black; 
+	font-weight: bold; 
+} 
+
+h3, h4 {
+	text-align: center;
+	color: black;
+}
+
+
+#choix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}   
+
+#choix #ajout a, #choix #modif a {
+    letter-spacing: 1px;
+    color: black;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+#choix #ajout a:hover, #choix #modif a:hover {
+    color: #4ea3fc;
+}
+
+#choix #ajout {
+    margin-right: 1.5rem;
+}
+
+#choix #modif {
+    margin-left: 1.5rem;
+}
+
+.lien, h4 {
+	font-size: 1rem;
+}
+
+h2
+{
+	font-size: 1.1rem;
+}
+
+.lien a, h2 a  {
+	text-decoration-style: none;
+	color: black;
+
+}
+
+#lien {
+	color: black;
+}
+.Boutons {
+    margin-left: 3rem;
+}
+
+.Boutons a {
+	display:inline-block;
+	margin-right: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.Boutons a:hover {
+    color: #4ea3fc;
+}
