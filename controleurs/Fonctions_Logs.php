@@ -17,9 +17,7 @@ function Logs(string $object) : array
     return $data_tab;
 }
 
-
 // --------------------------------------------------//
-
 
 
 // fonction de décodage des logs

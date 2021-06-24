@@ -23,11 +23,11 @@
 
     <div id="temps_reaction">
         <p> Votre temps de réaction a été de : </p>
-        <p><?=$valeur;?> secondes</p><br>
+        <p><?=$valeur;?> millisecondes</p><br>
         <p> Votre score est donc : <span class=<?=$classe;?>><?=$scoreAff;?></span></p>
     </div>
     <div id="bouton_retour">
-        <a href="Accueil_Pilote.php" id="retour">Retour à l'accueil</a>
+        <a href="Accueil.php" id="retour">Retour à l'accueil</a>
     </div>
 
 

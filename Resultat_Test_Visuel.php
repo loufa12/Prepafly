@@ -23,7 +23,7 @@ $lastTrame = end($logs);
 
 // Valeur du test
 $dict = TradLogs($lastTrame);
-$valeur = $dict['Valeur'];
+$valeur = hexdec($dict['Valeur']);
 
 if ($valeur < 500 && $valeur > 0) {
 	$score = "A";
@@ -50,6 +50,6 @@ $date_test = date('d-m-y h:i:s');
 $type_test = "visuel";
 $nSS = IdFromMail($bdd, $mail);
 
-NewTest($bdd, $date_test, $score, $type_test, $nSS);
+NewTest($bdd, $date_test, $score, $type_test, $nSS, $valeur);
 
 require("vues/Resultat_Test_Visuel.php");
