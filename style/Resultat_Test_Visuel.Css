@@ -1,7 +1,7 @@
 
 #temps_reaction {
 	text-align: center;
-	margin-bottom: 10rem;
+	margin-bottom: 5rem;
 }
 
 
@@ -35,6 +35,13 @@
 	color: #4ea3fc;
 	font-weight: bold;
 	box-shadow: 0 0 10px #4ea3fc; /*4ea3fc*/
+}
+
+
+#bouton_retour a {
+	width: 12rem;
+	margin-top: 0;
+	margin-bottom: 5rem;
 }
 
 

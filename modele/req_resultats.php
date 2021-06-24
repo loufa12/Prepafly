@@ -29,3 +29,13 @@ function NewTest ($bdd, $date_test, $resultat, $test_id_type, $Utilisateur_nSS) 
 		'test_id_type' => $test_id_type, 
 		'Utilisateur_nSS' => $Utilisateur_nSS));
 }
+
+
+function ResultatsPilote ($bdd, $mail)
+{
+	$req_result = $bdd->prepare("SELECT date_test, test_id_type, resultat FROM test 
+		JOIN utilisateur 
+		ON test.Utilisateur_nSS = utilisateur.nSS WHERE mail = ?");
+	$req_result->execute(array($mail));
+	return $req_result->fetchAll();
+}

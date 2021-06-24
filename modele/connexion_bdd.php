@@ -11,5 +11,3 @@ catch(Exception $e) //Si la tentative échoue
 {
 	die('Erreur : '.$e->getMessage());
 }
-
-?>

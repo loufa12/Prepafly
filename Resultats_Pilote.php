@@ -1,4 +1,8 @@
 <?php
 session_start();
 
-require ('vues/Resultat.php');
+$mail = $_SESSION['mail'];
+
+include("modele/req_resultats.php");
+
+require ('vues/Resultat_Pilote.php');
