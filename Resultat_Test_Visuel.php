@@ -52,5 +52,4 @@ $nSS = IdFromMail($bdd, $mail);
 
 NewTest($bdd, $date_test, $score, $type_test, $nSS);
 
-
 require("vues/Resultat_Test_Visuel.php");

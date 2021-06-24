@@ -5,14 +5,15 @@
 }
 
 
-#bouton_fin {
+#bouton_fin, #bouton_retour {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
 
+
 /*features du bouton*/
-#bouton_fin a {
+#bouton_fin a, #bouton_retour a {
 	font-size: 1rem;
 	text-align: center;
 	width: 10rem;
@@ -28,13 +29,14 @@
 	box-shadow: 0 0 10px #4ea3fc; /*4ea3fc*/
 }
 
-#bouton_fin #fin_test:hover {
+
+#bouton_fin #fin_test:hover, #bouton_retour #retour:hover {
 	border: none;
 	color: #4ea3fc;
 	font-weight: bold;
 	box-shadow: 0 0 10px #4ea3fc; /*4ea3fc*/
-
 }
+
 
 #attente {
 	text-align: center;

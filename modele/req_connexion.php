@@ -14,5 +14,4 @@ function BonId($bdd, $mail, $mdp)
 	else {
 		return false;
 	}
-
 }

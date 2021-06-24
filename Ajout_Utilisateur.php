@@ -19,7 +19,7 @@ if (isset($_POST['nss'], $_POST['nom'], $_POST['prenom'], $_POST['sexe'], $_POST
 		$sexe = $_POST['sexe'];
 		$date_naissance = $_POST['date_naissance'];
 		$mail = $_POST['mail'];
-		$mdp = $_POST['mdp'];
+		$mdp = password_hash($_POST['mdp']);
 		$adresse = $_POST['adresse'];
 		$ville = $_POST['ville'];
 		$pays = $_POST['pays'];

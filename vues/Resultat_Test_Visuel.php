@@ -26,6 +26,9 @@
         <p><?=$valeur;?> secondes</p><br>
         <p> Votre score est donc : <span class=<?=$classe;?>><?=$scoreAff;?></span></p>
     </div>
+    <div id="bouton_retour">
+        <a href="Accueil_Pilote.php" id="retour">Retour à l'accueil</a>
+    </div>
 
 
     <?php include("vues/footer.php"); ?>

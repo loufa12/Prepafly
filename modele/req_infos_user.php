@@ -1,4 +1,3 @@
-
 <?php 
 
 //fonction qui récupère les infos de l'utilisateur connecté
@@ -11,6 +10,12 @@ function InfosUser ($bdd, $mail)
 }
 
 
+function IdFromMail ($bdd, $mail) {
+	$req = $bdd->prepare("SELECT nSS FROM utilisateur WHERE mail = ? ");
+	$req->execute(array($mail));
+	return $req->fetch()[0];
+}
+
 
 function MailFromName ($bdd, $nom, $prenom)
 {
@@ -18,14 +23,6 @@ function MailFromName ($bdd, $nom, $prenom)
 	$req->execute(array($nom, $prenom));
 	return $req->fetchAll();
 }
-
-
-function IdFromMail ($bdd, $mail) {
-	$req = $bdd->prepare("SELECT nSS FROM utilisateur WHERE mail = ?");
-	$req->execute(array($mail));
-	return $req->fetchAll();
-}
-
 
 
 //fonction qui récupère la société à partir du mail de l'utilisateur
@@ -71,6 +68,7 @@ function ModifUser($bdd, $mail, $colonne, $champ)
 			$req = $bdd->prepare('UPDATE utilisateur SET pays = ? WHERE mail = ?');
 			break;
 	}
+
 	$req->execute(array($champ, $mail));
 }
 
@@ -113,7 +111,6 @@ function SearchUser($bdd, $recherche)
 	$req->execute(array($recherche));
 	return $req->fetchAll();
 }
-
 
 
 //fonction qui récupère la liste de toutes les sociétés

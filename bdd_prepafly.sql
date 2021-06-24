@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 17 juin 2021 à 08:47
+-- Généré le : jeu. 24 juin 2021 à 13:39
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -82,23 +82,19 @@ INSERT INTO `faq` (`id_question`, `question`, `reponse`) VALUES
 
 DROP TABLE IF EXISTS `mesure`;
 CREATE TABLE IF NOT EXISTS `mesure` (
-  `id_mesure` int NOT NULL,
+  `id_mesure` int NOT NULL AUTO_INCREMENT,
   `valeur` decimal(10,0) DEFAULT NULL,
   `Test_id_test` int NOT NULL,
   PRIMARY KEY (`id_mesure`,`Test_id_test`),
   KEY `fk_Mesure_Test1_idx` (`Test_id_test`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `mesure`
 --
 
 INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
-(1, '0', 1),
-(2, '0', 2),
-(3, '0', 3),
-(4, '0', 4),
-(5, '0', 5);
+(1, '0', 1);
 
 -- --------------------------------------------------------
 
@@ -111,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `societe` (
   `id_societe` int NOT NULL AUTO_INCREMENT,
   `nom_societe` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `societe`
@@ -122,7 +118,11 @@ INSERT INTO `societe` (`id_societe`, `nom_societe`) VALUES
 (2, 'Air France'),
 (3, 'United'),
 (4, 'Air Italia'),
-(5, 'Air Bretagne');
+(5, 'Air Bretagne'),
+(6, 'Air Belgique'),
+(7, 'Air Corsica'),
+(8, 'Qatar Airways'),
+(9, 'Easy Jet');
 
 -- --------------------------------------------------------
 
@@ -147,11 +147,9 @@ CREATE TABLE IF NOT EXISTS `test` (
 --
 
 INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
-(1, '2021-01-04 18:47:48', 'A', 'visuel', '135790'),
-(2, '2021-01-14 12:20:48', 'C', 'visuel', '1245780'),
-(3, '2021-01-02 10:56:48', 'A', 'visuel', '2356890'),
-(4, '2021-01-07 15:27:53', 'B', 'visuel', '1245780'),
-(5, '2020-12-15 16:47:48', 'B', 'visuel', '12345');
+(0, '2024-06-21 12:57:06', 'A', 'visuel', '12345'),
+(0, '2024-06-21 01:20:46', 'A', 'visuel', '135790'),
+(1, '2021-01-04 18:47:48', 'A', 'visuel', '135790');
 
 -- --------------------------------------------------------
 
@@ -228,15 +226,17 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `pays`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
+('047', 'CAPPOEN', 'Maxence', '1992-11-04', 'Homme', 'mc@gmail.com', '', 'Lille', 'France', '$2y$10$8n4MtD.PmkR7SuHZ6ZNs5eXYS/Pnv4pu/hgtUM1Bw4cAWmFgCsHuG', 'p', 9),
 ('09876543222', 'MERAH', 'Nadir', '2021-02-10', 'Homme', 'nm@gmail.com', '', 'Paris', 'France', '$2y$10$t2ntrbUVRwsb6sBxMbGt9eZm.8kzNtPIr.OvRLlSF90Ybv7v7wxm2', 'm', 2),
+('123', 'TEST', 'Test', '1990-11-05', 'Homme', 'tt@gmail.com', '', 'Paris', 'France', '$2y$10$MzJF2Gi2b7eUElH901OG0.Rwht5gwbMp6A/J6FH/AUdIjLlFPMX0K', 'p', 7),
 ('12345', 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 'France', '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
 ('1245780', 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
 ('135790', 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 'France', '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
-('18645613', 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
 ('2356890', 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
 ('24680', 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', 'aodihda', 'ouadb', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
-('29461541', 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
-('97146914', 'LONTRAC', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
+('321', 'FAGNIEZ', 'Clémence', '1987-07-13', 'Femme', 'cf@gmail.com', '', 'Bruxelles', 'BELGIQUE', '$2y$10$VDYpl1eEkgLlWKn7yiBe1eA4A6LG2FeK5sBP8wQt03RDntCdsdW1a', 'p', 6),
+('456', 'KRETTLY', 'Garance', '2000-01-11', 'Femme', 'gk@gmail.com', '', 'Neuilly', 'France', '$2y$10$rtItVzBvCFW6ZaWhvGfQ7ONGXWmZITJjEeBDdxGpO3upDSTs3hvqy', 'p', 8),
+('678', 'LEFEVRE', 'Valérie', '1964-08-31', 'Femme', 'vl@gmail.com', '', 'Nantes', 'France', '$2y$10$TOKS8Y8KzkLBmyb1Gow/ueB2ftOzvOONsPo8O6YvCMnGHSYdQx8lO', 'p', 2);
 
 --
 -- Contraintes pour les tables déchargées
