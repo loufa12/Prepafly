@@ -21,7 +21,7 @@
 
     <div id="durée">
     	<p>Ce test dure environ 20 minutes. Une fois le test terminé vous pourrez directement voir votre score.</p>
-        <img id="img_cockpit" src='images/test_auditif.jpg'>
+        <img id="img_cockpit" src='images/test_visuel.jpeg'>
     </div>
 
     <div id="bouton">

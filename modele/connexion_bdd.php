@@ -4,7 +4,7 @@
 try
 {
 	// Tentative de connexion à la bdd 
-	$bdd = new PDO('mysql:host=localhost;dbname=prepafly;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=bdd_prepafly;charset=utf8', 'root', '');
 }
 
 catch(Exception $e) //Si la tentative échoue

@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+$mail = $_SESSION['mail'];
 
 //Si on arrive sur la page pour faire une modification, on n'a que l'id de la question
 if (isset($_GET['idquestion'])) {

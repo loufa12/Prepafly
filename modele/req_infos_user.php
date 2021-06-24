@@ -20,6 +20,13 @@ function MailFromName ($bdd, $nom, $prenom)
 }
 
 
+function IdFromMail ($bdd, $mail) {
+	$req = $bdd->prepare("SELECT nSS FROM utilisateur WHERE mail = ?");
+	$req->execute(array($mail));
+	return $req->fetchAll();
+}
+
+
 
 //fonction qui récupère la société à partir du mail de l'utilisateur
 function NomCompagnie ($bdd, $mail)

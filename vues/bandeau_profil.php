@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style/bandeau_profil.css" />
-    <title></title>
 </head>
 <body>
         <div class="bandeau_prepafly">
@@ -19,7 +18,6 @@
                 <div style="margin-left: 0;"><a id="langue" href="#Langue">Langue<span>▼</span></a></div>
                 <div><a id="profil" href="Profil.php">Profil</a></div>
                 <div><a id="déconnexion" href="deconnexion.php">Déconnexion</a></style></div>
-
             </div>
         </div>
 </body>

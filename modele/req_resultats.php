@@ -22,7 +22,10 @@ function NewMesure ($bdd, $valeur, $test)
 }
 
 
-function NewTest ($bdd, $date_test, $resultat, $type_test, $nSS) {
-	$req = $bdd->prepare("INSERT INTO test (date_test, resultat, type_test, nSS) VALUES (:date_test, :resultat, :type_test, :nSS");
-	$req->execute(array('date_test' => $date_test, 'resultat' => $resultat, 'type_test' => $type_test, 'nSS' => $nSS));
+function NewTest ($bdd, $date_test, $resultat, $test_id_type, $Utilisateur_nSS) {
+	$req = $bdd->prepare("INSERT INTO test (date_test, resultat, test_id_type, Utilisateur_nSS) VALUES (:date_test, :resultat, :test_id_type, :Utilisateur_nSS");
+	$req -> execute(array('date_test' => $date_test, 
+		'resultat' => $resultat, 
+		'test_id_type' => $test_id_type, 
+		'Utilisateur_nSS' => $Utilisateur_nSS));
 }

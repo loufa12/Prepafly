@@ -24,7 +24,7 @@
     <div id="temps_reaction">
         <p> Votre temps de réaction a été de : </p>
         <p><?=$valeur;?> secondes</p><br>
-        <p> Votre score est donc : <span class=<?=$classe;?>><?=$score;?></span></p>
+        <p> Votre score est donc : <span class=<?=$classe;?>><?=$scoreAff;?></span></p>
     </div>
 
 

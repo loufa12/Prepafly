@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 02 fév. 2021 à 01:37
--- Version du serveur :  5.7.31
+-- Généré le : jeu. 17 juin 2021 à 08:47
+-- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `prepafly`
+-- Base de données : `bdd_prepafly`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `cgu`;
 CREATE TABLE IF NOT EXISTS `cgu` (
-  `id_article` int(11) NOT NULL AUTO_INCREMENT,
+  `id_article` int NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) NOT NULL,
   `article` longtext NOT NULL,
   PRIMARY KEY (`id_article`),
@@ -59,7 +59,7 @@ INSERT INTO `cgu` (`id_article`, `titre`, `article`) VALUES
 
 DROP TABLE IF EXISTS `faq`;
 CREATE TABLE IF NOT EXISTS `faq` (
-  `id_question` int(11) NOT NULL AUTO_INCREMENT,
+  `id_question` int NOT NULL AUTO_INCREMENT,
   `question` varchar(5000) DEFAULT NULL,
   `reponse` varchar(10000) DEFAULT NULL,
   PRIMARY KEY (`id_question`)
@@ -82,9 +82,9 @@ INSERT INTO `faq` (`id_question`, `question`, `reponse`) VALUES
 
 DROP TABLE IF EXISTS `mesure`;
 CREATE TABLE IF NOT EXISTS `mesure` (
-  `id_mesure` int(11) NOT NULL,
+  `id_mesure` int NOT NULL,
   `valeur` decimal(10,0) DEFAULT NULL,
-  `Test_id_test` int(11) NOT NULL,
+  `Test_id_test` int NOT NULL,
   PRIMARY KEY (`id_mesure`,`Test_id_test`),
   KEY `fk_Mesure_Test1_idx` (`Test_id_test`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -94,12 +94,11 @@ CREATE TABLE IF NOT EXISTS `mesure` (
 --
 
 INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
-(1, '19', 234567890),
-(2, '7', 234567890),
-(3, '16', 456789012),
-(4, '7', 456789012),
-(5, '24', 1234567890),
-(6, '11', 1234567890);
+(1, '0', 1),
+(2, '0', 2),
+(3, '0', 3),
+(4, '0', 4),
+(5, '0', 5);
 
 -- --------------------------------------------------------
 
@@ -109,7 +108,7 @@ INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
 
 DROP TABLE IF EXISTS `societe`;
 CREATE TABLE IF NOT EXISTS `societe` (
-  `id_societe` int(11) NOT NULL AUTO_INCREMENT,
+  `id_societe` int NOT NULL AUTO_INCREMENT,
   `nom_societe` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -133,7 +132,7 @@ INSERT INTO `societe` (`id_societe`, `nom_societe`) VALUES
 
 DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
-  `id_test` int(11) NOT NULL,
+  `id_test` int NOT NULL,
   `date_test` datetime DEFAULT NULL,
   `resultat` varchar(20) DEFAULT NULL,
   `test_id_type` varchar(50) NOT NULL,
@@ -148,11 +147,11 @@ CREATE TABLE IF NOT EXISTS `test` (
 --
 
 INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
-(234567890, '2021-01-04 18:47:48', 'A', 'visuel', '135790'),
-(345678901, '2021-01-14 12:20:48', 'C', 'regulier', '1245780'),
-(456789012, '2021-01-02 10:56:48', 'A', 'auditif', '2356890'),
-(526284919, '2021-01-07 15:27:53', 'B', 'complet', '1245780'),
-(1234567890, '2020-12-15 16:47:48', 'B', 'complet', '12345');
+(1, '2021-01-04 18:47:48', 'A', 'visuel', '135790'),
+(2, '2021-01-14 12:20:48', 'C', 'visuel', '1245780'),
+(3, '2021-01-02 10:56:48', 'A', 'visuel', '2356890'),
+(4, '2021-01-07 15:27:53', 'B', 'visuel', '1245780'),
+(5, '2020-12-15 16:47:48', 'B', 'visuel', '12345');
 
 -- --------------------------------------------------------
 
@@ -218,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `pays` varchar(25) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `type_utilisateur_id_type` varchar(2) NOT NULL,
-  `société_id_societe` int(11) NOT NULL,
+  `société_id_societe` int NOT NULL,
   PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
   KEY `fk_Utilisateur_Type Utilisateur1_idx` (`type_utilisateur_id_type`),
   KEY `fk_utilisateur_société1_idx` (`société_id_societe`)
@@ -260,8 +259,8 @@ ALTER TABLE `test`
 -- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `fk_Utilisateur_Type Utilisateur1` FOREIGN KEY (`type_utilisateur_id_type`) REFERENCES `type_utilisateur` (`id_type`),
-  ADD CONSTRAINT `fk_utilisateur_société1` FOREIGN KEY (`société_id_societe`) REFERENCES `societe` (`id_societe`);
+  ADD CONSTRAINT `fk_utilisateur_société1` FOREIGN KEY (`société_id_societe`) REFERENCES `societe` (`id_societe`),
+  ADD CONSTRAINT `fk_Utilisateur_Type Utilisateur1` FOREIGN KEY (`type_utilisateur_id_type`) REFERENCES `type_utilisateur` (`id_type`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
