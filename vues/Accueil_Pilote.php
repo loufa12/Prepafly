@@ -20,7 +20,7 @@
     <div class="choix">
         <div class="num"><a href="#">Consulter les tests programmés à venir</a></div>
 
-        <div class="num"><a href="Resultat.php">Consulter les derniers résultats obtenus</a></div>
+        <div class="num"><a href="Resultats_Pilote.php">Consulter les derniers résultats obtenus</a></div>
 
         <div class="num" id="clic_tests" onclick="ListeTests()"><a>Faire des tests d'entraînement</a></div><br><br>
         <div id="liste_tests" style="display: none;">

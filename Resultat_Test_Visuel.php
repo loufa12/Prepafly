@@ -25,17 +25,17 @@ $lastTrame = end($logs);
 $dict = TradLogs($lastTrame);
 $valeur = hexdec($dict['Valeur']);
 
-if ($valeur < 500 && $valeur > 0) {
+if ($valeur < 1000 && $valeur > 0) {
 	$score = "A";
 	$scoreAff = "A &#128526";
 	$classe = "vert";
 }
-elseif ($valeur > 500 && $valeur < 1000) {
+elseif ($valeur > 1000 && $valeur < 1500) {
 	$score = "B";
 	$scoreAff = "B &#128578";
 	$classe = "jaune";
 }
-elseif ($valeur > 1000 && $valeur < 1500) {
+elseif ($valeur > 1500 && $valeur < 2000) {
 	$score = "C";
 	$scoreAff = "C &#128528";
 	$classe = "orange";

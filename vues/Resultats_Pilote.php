@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
     <link rel="stylesheet" href="style/Resultat.css" />
@@ -28,38 +27,23 @@
 
     <table id="tableau">
         <tr>
-            <th>Test</th>
-            <th>Date du test</th>
-            <th>Durée du test</th>
+            <th>Type de Test</th>
+            <th>Date du Test</th>
             <th>Résultat</th>
+            <th>Temps de réaction (ms)</th>
         </tr>
-        <tr>
-            <td>Test visuel n°1</td>
-            <td>01/09/2020</td>
-            <td>30'55''</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Test visuel n°2</td>
-            <td>03/09/2020</td>
-            <td>26'41''</td>
-            <td>C</td>
-        </tr>
-        <tr>
-            <td>Test auditif n°1</td>
-            <td>05/09/2020</td>
-            <td>25'22''</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>Test auditif n°2</td>
-            <td>09/09/2020</td>
-            <td>15'39''</td>
-            <td>A</td>
-        </tr>
+        <?php
+    foreach ($results as $row) {
+        echo "<tr>";
+        for ($i=0; $i<=3; $i++ ) {
+            echo "<td>".$row[$i]."</td>";
+        }
+        echo "</tr>";
+    }
+    ?>
     </table><br><br><br>
 
-    <?php include("vues/footer.php"); ?>
+    <?php include("vues/footer.php");?>
 
 
 </body>

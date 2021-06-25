@@ -50,8 +50,8 @@
 }
 
 .vert {
-	color: green;
-	border: 2px green solid;
+	color: rgb(37, 168, 37) ;
+	border: 2px rgb(37, 168, 37) solid;
 	border-radius: 8px;
 	padding: 0.3rem 0.6rem;
 }
@@ -64,15 +64,15 @@
 }
 
 .jaune {
-	color: yellow;
-	border: 2px yellow solid;
+	color: rgb(253, 220, 73);
+	border: 2px rgb(253, 220, 73) solid;
 	border-radius: 8px;
 	padding: 0.3rem 0.6rem;
 }
 
 .orange {
-	color: orange;
-	border: 2px orange solid;
+	color: rgb(255, 136, 0);
+	border: 2px rgb(255, 136, 0) solid;
 	border-radius: 8px;
 	padding: 0.3rem 0.6rem;
 }
